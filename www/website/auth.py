@@ -17,16 +17,23 @@ def irc_proxies():
     if 'logged_in' in session:
         if session['logged_in'] == 'True':
             proxy_list: dict[str | None, str | None]
+<<<<<<< HEAD
             users = load_users_ini(session['username'])
+=======
+            users = load_users_ini(session['username'].lower())
+>>>>>>> 551521c307c70d20660e54401494fe0f89d6f04d
             if 'proxy' in users.keys():
                 proxy_list = users['proxy']
             else:
                 proxy_list = {}
             return render_template('proxies.html', bnc_list=proxy_list)
+<<<<<<< HEAD
         else:
             flash("Logged_in = False", category='error')
             return redirect('/login.html')
     flash("Logged_in = None", category='error')
+=======
+>>>>>>> 551521c307c70d20660e54401494fe0f89d6f04d
     return redirect('/login.html')
 
 
