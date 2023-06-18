@@ -10,7 +10,7 @@ from flask_session.__init__ import Session
 
 app = Flask(__name__)
 app.config['SERVER_NAME'] = "www.mslscript.com"
-app.secret_key = "AadaDADSASDASDSDAasdsda1asdasd23423sdvbffbbfdbbnSDFDSFBfbs231"
+app.secret_key = "AadaDADSASDASDSDbfdbbnSDFDSFBfbs231"
 app.config["SESSION_PERMANENT"] = True
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
